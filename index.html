@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AgriExport - Agricultural Export Insights</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <header>
+    <h1>AgriExport</h1>
+    <nav>
+      <a href="#hero">Home</a>
+      <a href="#search">Search</a>
+      <a href="#filters">Filters</a>
+      <a href="#stats">Stats</a>
+      <a href="#products">Products</a>
+      <a href="#graphs">Graphs</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section id="hero">
+    <div class="hero-content">
+      <h2>Real-Time Agricultural Export Insights</h2>
+      <p>Your one-stop platform for export statistics, market trends, and product data.</p>
+    </div>
+  </section>
+
+  <section id="search">
+    <h2>Search Agricultural Products</h2>
+    <div class="search-bar">
+      <input id="searchInput" type="text" placeholder="Enter product name..." />
+      <button id="searchBtn">Search</button>
+    </div>
+    <div id="searchResult" class="results-container"></div>
+  </section>
+
+  <section id="filters">
+    <h2>Filter and Sort Data</h2>
+    <div class="filter-grid">
+      <div>
+        <label for="categoryFilter">Category</label>
+        <select id="categoryFilter">
+          <option value="all">All</option>
+          <option value="cereals">Cereals</option>
+          <option value="spices">Spices</option>
+          <option value="fruits">Fruits</option>
+          <option value="vegetables">Vegetables</option>
+        </select>
+      </div>
+
+      <div>
+        <label for="sortFilter">Sort by Value</label>
+        <select id="sortFilter">
+          <option value="desc">High to Low</option>
+          <option value="asc">Low to High</option>
+        </select>
+      </div>
+
+      <div>
+        <label for="yearFilter">Year</label>
+        <select id="yearFilter">
+          <option value="2025">2025</option>
+          <option value="2024">2024</option>
+          <option value="2023">2023</option>
+        </select>
+      </div>
+
+      <button id="applyFiltersBtn">Apply Filters</button>
+    </div>
+  </section>
+
+  <section id="stats">
+    <h2>Export Statistics</h2>
+    <div class="stats">
+      <div class="card">
+        <h3>Total Exports</h3>
+        <p class="counter" id="totalExport">$0</p>
+      </div>
+
+      <div class="card">
+        <h3>Top Exported Product</h3>
+        <p id="topProduct">Loading...</p>
+      </div>
+
+      <div class="card">
+        <h3>Top Export Destination</h3>
+        <p id="topDestination">Loading...</p>
+      </div>
+
+      <div class="card">
+        <h3>Fastest Growing Product</h3>
+        <p id="fastestGrowing">Loading...</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="products">
+    <h2>Popular Exported Products</h2>
+    <div class="products" id="productList"></div>
+  </section>
+
+  <section id="graphs">
+    <h2>Export Data Visualizations</h2>
+
+    <div class="graph-section">
+      <h3>Yearly Export Comparison</h3>
+      <canvas id="exportChart"></canvas>
+    </div>
+
+    <div class="graph-section">
+      <h3>Category Contribution (%)</h3>
+      <canvas id="categoryPieChart"></canvas>
+    </div>
+
+    <div class="graph-section">
+      <h3>Top Countries</h3>
+      <canvas id="countryBarChart"></canvas>
+    </div>
+  </section>
+
+  <section id="about">
+    <h2>About AgriExport</h2>
+    <p>We provide simplified access to agricultural export data for students, farmers, researchers, and the public. Our goal is to make complex export statistics easy to understand through visuals, graphs, and real-time insights.</p>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <form id="contactForm">
+      <input type="text" id="name" placeholder="Your Name" required />
+      <input type="email" id="email" placeholder="Your Email" required />
+      <textarea rows="5" id="message" placeholder="Your Message" required></textarea>
+      <button type="submit">Send</button>
+    </form>
+    <p id="contactStatus"></p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 AgriExport. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
